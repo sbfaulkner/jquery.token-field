@@ -6,11 +6,11 @@ Add support for converting an English representation of elapsed time into second
 
 1. Copy javascript, stylesheet and images to your project.
 
+2. Include javascript and stylesheets in your html.
+
         <script src="/javascripts/jquery.js" type="text/javascript"></script>
         <script src="/javascripts/jquery.token-field.js" type="text/javascript"></script>
         <link rel="stylesheet" href="/stylesheets/token-field.css" type="text/css" media="screen">
-
-2. Include javascript and stylesheets in your html.
 
 3. Add textarea or input[type=text] to your html with comma-delimited values.
 
