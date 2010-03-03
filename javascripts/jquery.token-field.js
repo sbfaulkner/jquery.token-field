@@ -10,7 +10,8 @@
     function console_log(text) {
       try {
         console.log(text);
-      } catch {
+      }
+      catch(e) {
       }
     }
 
