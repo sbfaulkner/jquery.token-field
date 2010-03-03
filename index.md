@@ -41,7 +41,9 @@ The token-field plugin for jquery provides a convenient (and stylish!) way to co
 </html>
 {% endhighlight %}
 
-## [Demo](demo.html) ##
+## Demo ##
+
+[Here](demo.html) is a demo page with several examples.
 
 ## License ##
 
