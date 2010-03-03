@@ -98,8 +98,6 @@
     return this.each(function(){
       var id = $(this).attr('id');
       var name = $(this).attr('name');
-      // add token-field class before retrieving classes and style/size (so that any font changes are realized)
-      $(this).addClass('token-field');
       var klass = $(this).attr('class');
       var style = 'min-height: '+$(this).css('height')+'; height: auto !important; height: '+$(this).css('height')+'; width: '+$(this).css('width');
       var tokens = $.map($(this).val().replace(/^\s*(.+)\s*$/,'$1').split(','), function(v) { if (isToken(v)) return tokenHtml(v); console_log('Warning: ignoring bad token - '+v); return null; });
@@ -107,7 +105,7 @@
         console_log('Warning: ignoring extra tokens after maximum of '+settings.max);
         tokens = tokens.slice(0,settings.max);
       }
-      observeTokenField($('<div></div>').attr({'class':klass,'id':id,'name':name,'style':style}).html(tokens.join('')+"<div class='token-input'><input type='text' size='1'/><span class='token-input-sizer'>###</span></div><div style='clear:both'></div>").replaceAll(this));
+      observeTokenField($('<div></div>').attr({'class':klass,'id':id,'name':name,'style':style}).addClass('token-field').html(tokens.join('')+"<div class='token-input'><input type='text' size='1'/><span class='token-input-sizer'>###</span></div><div style='clear:both'></div>").replaceAll(this));
     });
   };
 })(jQuery);
