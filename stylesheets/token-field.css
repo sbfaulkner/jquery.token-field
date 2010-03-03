@@ -53,7 +53,7 @@
   background-image: url(../images/selected-token.gif);
 }
 .token-field .token span.token-x {
-  background-image: url(asdfasdf);
+  background-image: url(../images/transparent.gif);
   padding: 0 2px 0 3px;
   color: #acb9d3;
   display: inline;
@@ -64,7 +64,7 @@
   font-weight: bold;
 }
 .token-field .token:hover span.token-x {
-  background-image: url(asdfasdf);
+  background-image: url(../images/transparent.gif);
 }
 .token-field .token-input {
   float: left;
