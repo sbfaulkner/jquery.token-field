@@ -13,6 +13,5 @@
 .token-field .token span.token-x { background-image: url(asdfasdf); padding: 0 2px 0 3px; color: #acb9d3; display: inline; cursor: pointer; font-size: 12px; line-height: 11px; font-weight: bold; }
 .token-field .token:hover span.token-x { background-image: url(asdfasdf); }
 .token-field .token-input { float: left; margin-top: 3px; }
-.token-field .token-input input { font: 11px "Lucida Grande", "Trebuchet MS", Verdana, sans-serif; border: none; outline: 0 none; width: 100%; }
-.token-input-sizer { display: inline; left: -10000px; position: absolute; top: -10000px; }
+.token-field .token-input input { font: 11px "Lucida Grande", "Trebuchet MS", Verdana, sans-serif; border: 0 none; outline: 0 none; width: 100%; }
 .token-field .token-input-sizer { font: 11px "Lucida Grande", "Trebuchet MS", Verdana, sans-serif; left: 0; position: relative; top: 0; display: block; overflow: hidden; height: 0; line-height: 0; }
