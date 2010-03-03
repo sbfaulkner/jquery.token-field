@@ -4,15 +4,13 @@
        regex: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
        max: 0
     };
-    var log = null;
 
     if (options) $.extend(settings, options);
 
     function console_log(text) {
-      if (window.console) {
+      try {
         console.log(text);
-      } else {
-        log.append(text+'<br/>');
+      } catch {
       }
     }
 
@@ -109,7 +107,6 @@
         tokens = tokens.slice(0,settings.max);
       }
       observeTokenField($('<div></div>').attr({'class':klass,'id':id,'name':name,'style':style}).html(tokens.join('')+"<div class='token-input'><input type='text' size='1'/><span class='token-input-sizer'>###</span></div><div style='clear:both'></div>").replaceAll(this));
-      if (!window.console && !log) log = $("<pre style='display:none'></pre>").appendTo($('body'));
     });
   };
 })(jQuery);
