@@ -15,24 +15,31 @@ The token-field plugin for jquery provides a convenient (and stylish!) way to co
 
 ## Install ##
 
-1. Copy javascript, styleshee
-2. t and images to your project.
-
+1. Copy javascript, stylesheet and images to your project.
 2. Include javascript and stylesheets in your html.
-
-        <script src="/javascripts/jquery.js" type="text/javascript"></script>
-        <script src="/javascripts/jquery.token-field.js" type="text/javascript"></script>
-        <link rel="stylesheet" href="/stylesheets/token-field.css" type="text/css" media="screen">
-
 3. Add textarea or input[type=text] to your html with comma-delimited values.
-
-        <textarea class='email'>one@domain.com,two@other.net,three@somewhere.ca</textarea>
-
 4. Invoke the plugin in your document ready handler.
 
-        $(document).ready(function() {
-          $('textarea.email').tokenField();
-        });
+## Example ##
+
+{% highlight html %}
+<html>
+  <head>
+    <title>jquery.token example</title>
+    <link rel="stylesheet" href="/stylesheets/token-field.css" type="text/css" media="screen">
+    <script src="/javascripts/jquery.js" type="text/javascript"></script>
+    <script src="/javascripts/jquery.token-field.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $('textarea.email').tokenField();
+      });
+    </script>
+  </head>
+  <body>
+    <textarea class='email'>one@domain.com,two@other.net,three@somewhere.ca</textarea>
+  </body>
+</html>
+{% endhighlight %}
 
 ## License ##
 
