@@ -8,7 +8,9 @@ body {
   width: 700px;
 }
 
-.download { float: right; }
+.download {
+  float: right;
+}
 
 h1 {
   font-size: 3em;
@@ -37,7 +39,10 @@ pre {
   margin-right: 80px;
 }
 .footer {
-  padding-top:30px;
+  padding-top: 30px;
   font-size: 0.9em;
   font-style: italic;
+}
+input, textarea {
+  font: 11px "Lucida Grande", "Trebuchet MS", Verdana, sans-serif;
 }
