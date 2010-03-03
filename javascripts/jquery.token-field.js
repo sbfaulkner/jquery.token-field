@@ -9,10 +9,11 @@
     if (options) $.extend(settings, options);
 
     function console_log(text) {
-      if (window.console)
+      if (window.console) {
         console.log(text);
-      else
+      } else {
         log.append(text+'<br/>');
+      }
     }
 
     function isToken(text) {
@@ -108,8 +109,9 @@
         tokens = tokens.slice(0,settings.max);
       }
       observeTokenField($('<div></div>').attr({'class':klass,'id':id,'name':name,'style':style}).html(tokens.join('')+"<div class='token-input'><input type='text' size='1'/><span class='token-input-sizer'>###</span></div><div style='clear:both'></div>").replaceAll(this));
-      if (!window.console)
+      if (!window.console) {
         log = $("<pre style='display:none'></pre>").appendTo($('body'));
+      }
     });
   };
 })(jQuery);
