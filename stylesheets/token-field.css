@@ -1,0 +1,18 @@
+.token-field { font: 11px "Lucida Grande", "Trebuchet MS", Verdana, sans-serif; border: 1px solid #bdc6d7; padding: 0 3px 3px 3px; }
+.token-field .token { border: none; outline: 0 none; float: left; white-space: nowrap; background-image: url(../images/token.gif); background-repeat: no-repeat; background-position: top left; text-decoration: none; color: #000; margin-top: 3px; margin-right: 3px; }
+.token-field .token span { background-image: url(../images/token.gif); background-repeat: no-repeat; background-position: top right; display: block; cursor: text; }
+.token-field .token span span { background-position: bottom right; }
+.token-field .token span span span { background-position: bottom left; }
+.token-field .token span span span span { background-image: none; padding: 2px 3px 2px 5px; }
+.token-field .token:hover { background-image: url(../images/highlighted-token.gif); }
+.token-field .token:hover span { background-image: url(../images/highlighted-token.gif); }
+.token-field .selected-token { background-image: url(../images/selected-token.gif); color: #fff; }
+.token-field .selected-token span { background-image: url(../images/selected-token.gif); }
+.token-field .selected-token:hover { background-image: url(../images/selected-token.gif); }
+.token-field .selected-token:hover span { background-image: url(../images/selected-token.gif); }
+.token-field .token span.token-x { background-image: url(asdfasdf); padding: 0 2px 0 3px; color: #acb9d3; display: inline; cursor: pointer; font-size: 12px; font-weight: bold; }
+.token-field .token:hover span.token-x { background-image: url(asdfasdf); }
+.token-field .token-input { float: left; margin-top: 3px; }
+.token-field .token-input input { font: 11px "Lucida Grande", "Trebuchet MS", Verdana, sans-serif; border: none; outline: 0 none; width: 100%; }
+.token-input-sizer { display: inline; left: -10000px; position: absolute; top: -10000px; }
+.token-field .token-input-sizer { font: 11px "Lucida Grande", "Trebuchet MS", Verdana, sans-serif; left: 0; position: relative; top: 0; display: block; overflow: hidden; height: 0; line-height: 0; }
