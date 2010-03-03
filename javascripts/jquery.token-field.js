@@ -12,7 +12,7 @@
       if (console)
         console.log(text);
       else
-        console_log.append(text+'<br/>');
+        log.append(text+'<br/>');
     }
 
     function isToken(text) {
