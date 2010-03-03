@@ -22,7 +22,7 @@ The token-field plugin for jquery provides a convenient (and stylish!) way to co
 
 ## Example ##
 
-<textarea class='email' rows='3' cols='60'>one@domain.com,two@other.net,three@somewhere.ca</textarea>
+<textarea class='email' rows='3' cols='100'>one@domain.com,two@other.net,three@somewhere.ca</textarea>
 
 {% highlight html %}
 <html>
@@ -38,7 +38,7 @@ The token-field plugin for jquery provides a convenient (and stylish!) way to co
     </script>
   </head>
   <body>
-    <textarea class='email' rows='3' cols='60'>one@domain.com,two@other.net,three@somewhere.ca</textarea>
+    <textarea class='email'>one@domain.com,two@other.net,three@somewhere.ca</textarea>
   </body>
 </html>
 {% endhighlight %}
