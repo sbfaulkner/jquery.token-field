@@ -1,4 +1,4 @@
-.token-field { font: 11px "Lucida Grande", "Trebuchet MS", Verdana, sans-serif; border: 1px solid #bdc6d7; padding: 0 3px 3px 3px; }
+.token-field { font: 11px "Lucida Grande", "Trebuchet MS", Verdana, sans-serif; border: 1px solid #bdc6d7; padding: 0 3px 3px 3px; zoom:1; }
 .token-field .token { border: none; outline: 0 none; float: left; white-space: nowrap; background-image: url(../images/token.gif); background-repeat: no-repeat; background-position: top left; text-decoration: none; color: #000; margin-top: 3px; margin-right: 3px; }
 .token-field .token span { background-image: url(../images/token.gif); background-repeat: no-repeat; background-position: top right; display: block; cursor: text; }
 .token-field .token span span { background-position: bottom right; }
