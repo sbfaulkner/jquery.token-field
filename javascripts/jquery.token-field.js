@@ -99,7 +99,7 @@
       var id = $(this).attr('id');
       var name = $(this).attr('name');
       var klass = $(this).attr('class');
-      var style = 'min-height: '+$(this).css('height')+'; height: auto !important; height: '+$(this).css('height')+'; width: '+$(this).css('width');
+      var style = 'min-height: '+$(this).height()+'; height: auto !important; height: '+$(this).height()+'; width: '+$(this).width();
       var tokens = $.map($(this).val().replace(/^\s*(.+)\s*$/,'$1').split(','), function(v) { if (isToken(v)) return tokenHtml(v); console_log('Warning: ignoring bad token - '+v); return null; });
       if (settings.max > 0 && tokens.length > settings.max) {
         console_log('Warning: ignoring extra tokens after maximum of '+settings.max);
