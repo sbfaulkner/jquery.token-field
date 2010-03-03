@@ -109,7 +109,7 @@
       }
       observeTokenField($('<div></div>').attr({'class':klass,'id':id,'name':name,'style':style}).html(tokens.join('')+"<div class='token-input'><input type='text' size='1'/><span class='token-input-sizer'>###</span></div><div style='clear:both'></div>").replaceAll(this));
       if (!console)
-        log = $('body').append("<pre style='display:none'></pre>");
+        log = $("<pre style='display:none'></pre>").appendTo($('body'));
     });
   };
 })(jQuery);
