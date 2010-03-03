@@ -1,125 +1,110 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>sbfaulkner/jquery.token-field @ GitHub</title>
+    <style type="text/css">
+      body {
+        margin-top: 1.0em;
+        background-color: #fff;
+        font-family: Helvetica,Arial,FreeSans;
+        color: #000;
+      }
+      #container {
+        margin: 0 auto;
+        width: 700px;
+      }
+      h1 { font-size: 3.8em; color: #bdc6d7; margin-bottom: 3px; }
+      h1 .small { font-size: 0.4em; }
+      h1 a { text-decoration: none }
+      h2 { font-size: 1.5em; color: #bdc6d7; }
+      h3 { text-align: center; color: #bdc6d7; }
+      a { color: #bdc6d7; }
+      .description { font-size: 1.2em; margin-bottom: 30px; margin-top: 30px; font-style: italic;}
+      .download { float: right; }
+      pre { background: #eee; color: #000; padding: 15px;}
+      hr { border: 0; width: 80%; border-bottom: 1px solid #bdc6d7}
+      .footer { text-align:center; padding-top:30px; font-style: italic; }
+    </style>
+  </head>
 
-	<title>sbfaulkner/jquery.token-field @ GitHub</title>
-	
-	<style type="text/css">
-		body {
-  		margin-top: 1.0em;
-  		background-color: #cd0a10;
-		  font-family: Helvetica,Arial,FreeSans;
-  		color: #ffffff;
-    }
-    #container {
-      margin: 0 auto;
-      width: 700px;
-    }
-		h1 { font-size: 3.8em; color: #32f5ef; margin-bottom: 3px; }
-		h1 .small { font-size: 0.4em; }
-		h1 a { text-decoration: none }
-		h2 { font-size: 1.5em; color: #32f5ef; }
-    h3 { text-align: center; color: #32f5ef; }
-    a { color: #32f5ef; }
-    .description { font-size: 1.2em; margin-bottom: 30px; margin-top: 30px; font-style: italic;}
-    .download { float: right; }
-		pre { background: #000; color: #fff; padding: 15px;}
-    hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
-    .footer { text-align:center; padding-top:30px; font-style: italic; }
-	</style>
-	
-</head>
+  <body>
+    <a href="http://github.com/sbfaulkner/jquery.token-field"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
 
-<body>
-  <a href="http://github.com/sbfaulkner/jquery.token-field"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
+    <div id="container">
 
-  <div id="container">
+      <div class="download">
+        <a href="http://github.com/sbfaulkner/jquery.token-field/zipball/master">
+          <img border="0" width="90" src="http://github.com/images/modules/download/zip.png"></a>
+        <a href="http://github.com/sbfaulkner/jquery.token-field/tarball/master">
+          <img border="0" width="90" src="http://github.com/images/modules/download/tar.png"></a>
+      </div>
 
-    <div class="download">
-      <a href="http://github.com/sbfaulkner/jquery.token-field/zipball/master">
-        <img border="0" width="90" src="http://github.com/images/modules/download/zip.png"></a>
-      <a href="http://github.com/sbfaulkner/jquery.token-field/tarball/master">
-        <img border="0" width="90" src="http://github.com/images/modules/download/tar.png"></a>
+      <h1><a href="http://github.com/sbfaulkner/jquery.token-field">jquery.token-field</a>
+        <span class="small">by <a href="http://github.com/sbfaulkner">sbfaulkner</a></span></h1>
+
+      <div class="description">
+        a tokenized input plugin for jquery
+      </div>
+
+      <p>The token-field plugin for jquery provides a convenient (and stylish!) way to collect lists of email addresses, tags, etc. on your forms. The default look and feel is liberally copied from Facebook's email address entry fields.</p>
+
+      <h2>Dependencies</h2>
+      <p>jquery</p>
+
+      <h2>Install</h2>
+
+      <ol>
+        <li>Copy javascript, stylesheet and images to your project.</li>
+        <li><p>Include javascript and stylesheets in your html.</p>
+          <pre><code><script src="/javascripts/jquery.js" type="text/javascript"></script>
+<script src="/javascripts/jquery.token-field.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/stylesheets/token-field.css" type="text/css" media="screen">
+</code></pre</li>
+        <li><p>Add textarea or input[type=text] to your html with comma-delimited values.</p>
+          <pre><code><textarea class='email'>one@domain.com,two@other.net,three@somewhere.ca</textarea>
+</code></pre></li>
+        <li><p>Invoke the plugin in your document ready handler.</p>
+          <pre><code>$(document).ready(function() {
+  $('textarea.email').tokenField();
+});</code></pre></li>
+
+      <h2>License</h2>
+      <p>Copyright © 2010 unwwwired.net</p>
+      <p>Permission is hereby granted, free of charge, to any person obtaining
+        a copy of this software and associated documentation files (the
+        "Software"), to deal in the Software without restriction, including
+        without limitation the rights to use, copy, modify, merge, publish,
+        distribute, sublicense, and/or sell copies of the Software, and to
+        permit persons to whom the Software is furnished to do so, subject to
+        the following conditions:</p>
+      <p>The above copyright notice and this permission notice shall be
+        included in all copies or substantial portions of the Software.</p>
+      <p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+        EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+        MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+        NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+        LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+        OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+        WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
+
+      <h2>Author</h2>
+      <p>S. Brent Faulkner (brentf@unwwwired.net)</p>
+
+      <h2>Download</h2>
+      <p>You can download this project in either:
+        <a href="http://github.com/sbfaulkner/jquery.token-field/zipball/master">zip</a> or
+        <a href="http://github.com/sbfaulkner/jquery.token-field/tarball/master">tar</a> formats.</p>
+      <p>You can also clone the project with <a href="http://git-scm.com">Git</a>
+        by running:
+        <pre>$ git clone git://github.com/sbfaulkner/jquery.token-field</pre>
+      </p>
+
+      <div class="footer">
+        get the source code on GitHub : <a href="http://github.com/sbfaulkner/jquery.token-field">sbfaulkner/jquery.token-field</a>
+      </div>
     </div>
-
-    <h1><a href="http://github.com/sbfaulkner/jquery.token-field">jquery.token-field</a>
-      <span class="small">by <a href="http://github.com/sbfaulkner">sbfaulkner</a></span></h1>
-
-    <div class="description">
-      jquery plugin to deal with tokenized input (ie. tags or email addresses)
-    </div>
-
-    <p>jquery plugin to deal with tokenized input (ie. tags or email addresses)</p><h2>Dependencies</h2>
-<p>jquery</p>
-<h2>Install</h2>
-<p>1. Copy javascript, stylesheet and images to your project.
-
-        <script src="/javascripts/jquery.js" type="text/javascript"></script>
-        <script src="/javascripts/jquery.token-field.js" type="text/javascript"></script>
-        <link rel="stylesheet" href="/stylesheets/token-field.css" type="text/css" media="screen">
-
-2. Include javascript and stylesheets in your html.
-
-3. Add textarea or input[type=text] to your html with comma-delimited values.
-
-        <textarea class='email'>one@domain.com,two@other.net,three@somewhere.ca</textarea>
-
-4. Invoke the plugin in your document ready handler.
-
-        $(document).ready(function() {
-          $('textarea.email').tokenField();
-        });
-</p>
-<h2>License</h2>
-<p>Copyright © 2010 unwwwired.net
-
-Permission is hereby granted, free of charge, to any person obtaining
-a copy of this software and associated documentation files (the
-"Software"), to deal in the Software without restriction, including
-without limitation the rights to use, copy, modify, merge, publish,
-distribute, sublicense, and/or sell copies of the Software, and to
-permit persons to whom the Software is furnished to do so, subject to
-the following conditions:
-
-The above copyright notice and this permission notice shall be
-included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
-EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
-NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
-LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
-OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
-WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
-<h2>Authors</h2>
-<p>S. Brent Faulkner (brentf@unwwwired.net)
-<br/>
-<br/>      </p>
-<h2>Contact</h2>
-<p>S. Brent Faulkner (brentf@unwwwired.net)
-<br/>      </p>
-
-
-    <h2>Download</h2>
-    <p>
-      You can download this project in either
-      <a href="http://github.com/sbfaulkner/jquery.token-field/zipball/master">zip</a> or
-      <a href="http://github.com/sbfaulkner/jquery.token-field/tarball/master">tar</a> formats.
-    </p>
-    <p>You can also clone the project with <a href="http://git-scm.com">Git</a>
-      by running:
-      <pre>$ git clone git://github.com/sbfaulkner/jquery.token-field</pre>
-    </p>
-
-    <div class="footer">
-      get the source code on GitHub : <a href="http://github.com/sbfaulkner/jquery.token-field">sbfaulkner/jquery.token-field</a>
-    </div>
-
-  </div>
-
-  
-</body>
+  </body>
 </html>
