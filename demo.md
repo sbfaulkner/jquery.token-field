@@ -1,10 +1,16 @@
 ---
-layout: demo
+layout: default
 title: jquery.token-field demo
 ---
 <h1>jquery.token-field demo</h1>
 <h2>Tokenized &lt;INPUT&gt;</h2>
 <input type='text' id='input-test' value='one@example.net,two@example.net,three@example.net,four@example.net,five@example.net' size='100'/>
+{% highlight html %}
+<input type='text' id='input-test' value='one@example.net,two@example.net,three@example.net,four@example.net,five@example.net' size='100'/>
+<script>
+$('#input-test').tokenField();
+</script>
+{% endhighlight %}
 <h2>Tokenized &lt;TEXTAREA&gt;</h2>
 <textarea id='textarea-test' rows='6' cols='100'>one@example.net,two@example.net,three@example.net,four@example.net,five@example.net</textarea>
 <h2>Tokenized &lt;INPUT&gt; with maximum of 3 tokens</h2>

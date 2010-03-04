@@ -81,3 +81,11 @@ The token-field plugin for jquery provides a convenient (and stylish!) way to co
 ## Author ##
 
 S. Brent Faulkner (brentf@unwwwired.net)
+
+<script type="text/javascript">
+  //<![CDATA[
+  $(document).ready(function() {
+    $('textarea.email').tokenField();
+  });
+  //]]>
+</script>

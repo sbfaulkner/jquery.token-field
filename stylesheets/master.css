@@ -10,6 +10,40 @@ body {
 
 .download {
   float: right;
+  width: 38%;
+  text-align: center;
+  background-image: url(../images/ground10.gif);
+  background-repeat: no-repeat;
+  background-position: top left;
+  font-size: 0.8em;
+  margin-bottom: 3em;
+}
+
+.download span {
+  background-image: url(../images/ground10.gif);
+  background-repeat: no-repeat;
+  background-position: top right;
+  display: block;
+}
+.download span span {
+  background-image: none;
+  padding-top: 1em;
+}
+.download p {
+  margin: 0;
+  padding-top: 0.5em;
+  background-color: #e7e7e7;
+}
+.clone {
+  color: #888;
+  font-size: 0.8em;
+  background-image: url(../images/ground10.gif);
+  background-repeat: no-repeat;
+  background-position: bottom left;
+}
+.clone span {
+  background-position: bottom right;
+  padding-bottom: 1em;
 }
 
 h1 {
