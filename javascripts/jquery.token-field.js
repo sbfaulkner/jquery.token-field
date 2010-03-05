@@ -2,6 +2,7 @@
   $.fn.tokenField = function(options) {
     var settings = {
        regex: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
+       delimiters: ', ',
        max: 0
     };
 
@@ -13,6 +14,10 @@
       }
       catch(e) {
       }
+    }
+
+    function isDelimiter(ch) {
+      return String.fromCharCode(ch).match(RegExp('['+settings.delimiters+']'));
     }
 
     function isToken(text) {
@@ -38,9 +43,9 @@
       $('.token-input input', tokenField)
         .keypress(function(e) {
           $(this).next('.token-input-sizer').html($(this).val()+'###');
-          if (e.which == 13 || e.which == 44) {
+          if (e.which == 13 || isDelimiter(e.which)) {
             $(this).blur();
-            if (e.which == 44)
+            if (isDelimiter(e.which))
               $(this).focus();
             return false;
           }
