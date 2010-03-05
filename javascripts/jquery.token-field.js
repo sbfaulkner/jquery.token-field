@@ -137,7 +137,11 @@
       var id = $(this).attr('id');
       var name = $(this).attr('name');
       var klass = $(this).attr('class');
-      var style = 'min-height: '+$(this).height()+'px; height: auto !important; height: '+$(this).height()+'px; width: '+$(this).width()+'px;';
+      var style = '';
+      if ($(this).height() > 0)
+        style = style + 'min-height: '+$(this).height()+'px; height: auto !important; height: '+$(this).height()+'px;';
+      if ($(this).width() > 0)
+        style = style + 'width: '+$(this).width()+'px;';
       var tokens = parseTokens($(this).val());
       if (settings.max > 0 && tokens.length > settings.max) {
         console_log('Warning: ignoring extra tokens after maximum of '+settings.max);
