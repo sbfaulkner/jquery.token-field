@@ -22,8 +22,6 @@ The token-field plugin for jquery provides a convenient (and stylish!) way to co
 
 ## Example ##
 
-<textarea class='email'>one@domain.com,two@other.net,three@somewhere.ca</textarea>
-
 {% highlight html %}
 <html>
   <head>
@@ -33,7 +31,7 @@ The token-field plugin for jquery provides a convenient (and stylish!) way to co
     <script src="/javascripts/jquery.token-field.js" type="text/javascript"></script>
     <script type="text/javascript">
       $(document).ready(function() {
-        $('textarea.email').tokenField();
+        $('textarea.email').tokenField({badToken:null});
       });
     </script>
   </head>
@@ -42,6 +40,8 @@ The token-field plugin for jquery provides a convenient (and stylish!) way to co
   </body>
 </html>
 {% endhighlight %}
+
+<textarea class='email'>one@domain.com,two@other.net,three@somewhere.ca</textarea>
 
 ## Demo ##
 
@@ -85,7 +85,7 @@ S. Brent Faulkner (brentf@unwwwired.net)
 <script type="text/javascript">
   //<![CDATA[
   $(document).ready(function() {
-    $('textarea.email').tokenField();
+    $('textarea.email').tokenField({badToken:null});
   });
   //]]>
 </script>

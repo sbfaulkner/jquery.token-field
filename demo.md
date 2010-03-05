@@ -47,7 +47,9 @@ one@first.net,two@second.net,three@third.net,four@fourth.net,five@fifth.net
 <input type='text' id='max-test'
         value='one@first.net,two@second.net,three@third.net,four@fourth.net,five@fifth.net'/>
 <script>
-$('#max-test').tokenField({max:3});
+  $('#max-test').tokenField({
+    max:3, tooMany:function() {alert('you already entered 3 addresses'); $(this).val('');}
+  });
 </script>
 {% endhighlight %}
 
@@ -84,11 +86,14 @@ $('#word-test').tokenField({regex:/^[a-z][\w\-]+$/i});
 ### Result ###
 
 <input type='text' id='word-test' value='abc123,hello,foo-bar,no spaces,underscore_ok'/>
+
 <script type="text/javascript">
   //<![CDATA[
   $(document).ready(function() {
     $('#input-test,#textarea-test').tokenField();
-    $('#max-test').tokenField({max:3});
+    $('#max-test').tokenField({
+      max:3, tooMany:function() {alert('you already entered 3 addresses'); $(this).val('');}
+    });
     $('#phone-test').tokenField({regex:/^(?:\([0-9]{3}\) ?)?[0-9]{3}\-[0-9]{4}$/});
     $('#word-test').tokenField({regex:/^[a-z][\w\-]+$/i});
   });
