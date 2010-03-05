@@ -3,7 +3,9 @@
     var settings = {
        regex: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
        delimiters: ', ',
-       max: 0
+       max: 0,
+       badToken: function() { $(this).val(''); },
+       tooMany: function() { $(this).val(''); }
     };
 
     if (options) $.extend(settings, options);
@@ -63,9 +65,22 @@
         })
         // "parse" and insert token, then clear the input field
         .blur(function(e) {
-          if ((settings.max == 0 || $(this).closest('.token-input').siblings('.token').length < settings.max) && isToken($(this).val()))
-            observeToken($(tokenHtml($(this).attr('name'),$(this).val())).insertBefore($(this).closest('.token-input')));
-          $(this).val('');
+          if (settings.max == 0 || $(this).closest('.token-input').siblings('.token').length < settings.max) {
+            if (isToken($(this).val())) {
+              observeToken($(tokenHtml($(this).attr('name'),$(this).val())).insertBefore($(this).closest('.token-input')));
+              $(this).val('');
+            } else {
+              if (settings.badToken) {
+                this.badToken = settings.badToken;
+                this.badToken();
+              }
+            }
+          } else {
+            if (settings.tooMany) {
+              this.tooMany = settings.tooMany;
+              this.tooMany();
+            }
+          }
           return true;
         });
       observeToken($('.token', tokenField));
