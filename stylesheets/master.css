@@ -1,5 +1,5 @@
 body {
-  margin-top: 1em;
+  margin-top: 16px;
   font-family: Helvetica,Arial,FreeSans;
 }
 
@@ -8,28 +8,31 @@ body {
   width: 700px;
 }
 
-p {
-  margin: 0.3em 0;
+p, ol, ul {
+  margin: 5px 0;
 }
 
 .download {
   float: right;
   width: 38%;
   text-align: center;
-  margin: 0.5em 0 3em 1em;
-  padding: 0.8em 0;
+  margin: 8px 0 48px 1em;
+  padding: 10px 0;
   background-color: #eff2f7;
   border: 1px solid #ccd5e4;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
   border-radius: 8px;
+  behavior:url(../javascripts/border-radius.htc);
 }
 
 .clone {
   color: #888;
-  font-size: 0.7em;
+  font-size: 11px;
 }
 
 h1 {
-  font-size: 3em;
+  font-size: 48px;
   color: #3b5998;
   margin: 0;
 }
@@ -39,16 +42,16 @@ h1 a {
 }
 .subtitle {
   font-style: italic;
-  margin-bottom: 1em;
+  margin-bottom: 16px;
 }
 h2 {
-  font-size: 1.5em;
+  font-size: 24px;
   color: #627aad;
-  margin: 1em 0 0;
+  margin: 16px 0 0;
 }
 h3 {
-  font-size: 1.2em;
-  margin: 0.5em 0 0.2em;
+  font-size: 20px;
+  margin: 8px 0 0.2em;
   color: #627aad;
 }
 a {
@@ -58,17 +61,17 @@ pre {
   background-color: #eff2f7;
   border: 1px solid #ccd5e4;
   color: #333;
-  font-size: 0.9em;
-  padding: 0.8em 10px;
-  margin 0.3em 0;
+  font-size: 12px;
+  padding: 10px;
+  margin 5px 0;
 }
 .legal {
-  font-size: 0.9em;
+  font-size: 14px;
   margin-right: 80px;
 }
 .footer {
   padding-top: 30px;
-  font-size: 0.9em;
+  font-size: 14px;
   font-style: italic;
 }
 input {
