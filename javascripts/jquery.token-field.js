@@ -65,21 +65,25 @@
         })
         // "parse" and insert token, then clear the input field
         .blur(function(e) {
-          if (settings.max == 0 || $(this).closest('.token-input').siblings('.token').length < settings.max) {
-            if (isToken($(this).val())) {
-              observeToken($(tokenHtml($(this).attr('name'),$(this).val())).insertBefore($(this).closest('.token-input')));
-              $(this).val('');
+          if (!$(this).data('blur')) {
+            $(this).data('blur', true);
+            if (settings.max == 0 || $(this).closest('.token-input').siblings('.token').length < settings.max) {
+              if (isToken($(this).val())) {
+                observeToken($(tokenHtml($(this).attr('name'),$(this).val())).insertBefore($(this).closest('.token-input')));
+                $(this).val('');
+              } else {
+                if (settings.badToken) {
+                  this.badToken = settings.badToken;
+                  this.badToken();
+                }
+              }
             } else {
-              if (settings.badToken) {
-                this.badToken = settings.badToken;
-                this.badToken();
+              if (settings.tooMany) {
+                this.tooMany = settings.tooMany;
+                this.tooMany();
               }
             }
-          } else {
-            if (settings.tooMany) {
-              this.tooMany = settings.tooMany;
-              this.tooMany();
-            }
+            $(this).removeData('blur');
           }
           return true;
         });
