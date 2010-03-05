@@ -5,7 +5,7 @@ title: sbfaulkner/jquery.token-field @ GitHub
 
 # [jquery.token-field](http://github.com/sbfaulkner/jquery.token-field) #
 
-> a tokenized input plugin for jquery
+<p class='subtitle'>a tokenized input plugin for jquery</p>
 
 The token-field plugin for jquery provides a convenient (and stylish!) way to collect lists of email addresses, tags, etc. on your forms. The default look and feel is liberally copied from Facebook's email address entry fields.
 
@@ -22,7 +22,7 @@ The token-field plugin for jquery provides a convenient (and stylish!) way to co
 
 ## Example ##
 
-<textarea class='email' rows='3' cols='100'>one@domain.com,two@other.net,three@somewhere.ca</textarea>
+<textarea class='email'>one@domain.com,two@other.net,three@somewhere.ca</textarea>
 
 {% highlight html %}
 <html>

@@ -7,54 +7,39 @@ body {
   margin: 0 auto;
   width: 700px;
 }
+
 p {
   margin: 0.3em 0;
 }
+
 .download {
   float: right;
   width: 38%;
   text-align: center;
-  background-image: url(../images/ground10.gif);
-  background-repeat: no-repeat;
-  background-position: top left;
-  font-size: 0.8em;
-  margin-bottom: 3em;
+  margin: 0.5em 0 3em 1em;
+  padding: 0.8em 0;
+  background-color: #eff2f7;
+  border: 1px solid #ccd5e4;
+  border-radius: 8px;
 }
 
-.download span {
-  background-image: url(../images/ground10.gif);
-  background-repeat: no-repeat;
-  background-position: top right;
-  display: block;
-}
-.download span span {
-  background-image: none;
-  padding-top: 1em;
-}
-.download p {
-  margin: 0;
-  padding-top: 0.5em;
-  background-color: #e7e7e7;
-}
 .clone {
   color: #888;
-  font-size: 0.8em;
-  background-image: url(../images/ground10.gif);
-  background-repeat: no-repeat;
-  background-position: bottom left;
-}
-.clone span {
-  background-position: bottom right;
-  padding-bottom: 1em;
+  font-size: 0.7em;
 }
 
 h1 {
   font-size: 3em;
   color: #3b5998;
+  margin: 0;
 }
 h1 a {
   text-decoration: none;
   color: #3b5998;
+}
+.subtitle {
+  font-style: italic;
+  margin-bottom: 1em;
 }
 h2 {
   font-size: 1.5em;
@@ -70,11 +55,11 @@ a {
   color: #3b5998;
 }
 pre {
-  background: #eee;
-  border: 1px solid #ddd;
+  background-color: #eff2f7;
+  border: 1px solid #ccd5e4;
   color: #333;
   font-size: 0.9em;
-  padding: 15px;
+  padding: 0.8em 10px;
   margin 0.3em 0;
 }
 .legal {
@@ -86,6 +71,12 @@ pre {
   font-size: 0.9em;
   font-style: italic;
 }
-input, textarea {
+input {
   font: 11px "Lucida Grande", "Trebuchet MS", Verdana, sans-serif;
+  width: 690px;
+}
+textarea {
+  font: 11px "Lucida Grande", "Trebuchet MS", Verdana, sans-serif;
+  width: 690px;
+  height: 6em;
 }
