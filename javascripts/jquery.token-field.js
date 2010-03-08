@@ -43,6 +43,14 @@
       });
       // adjust size as typing occurs and blur when comma or enter pressed (retaining focus for comma)
       $('.token-input input', tokenField)
+        .keydown(function(e) {
+          if (e.which == 9 && $(this).val()) {
+            $(this).blur();
+            $(this).focus();
+            return false;
+          }
+          return true;
+        })
         .keypress(function(e) {
           $(this).next('.token-input-sizer').html($(this).val()+'###');
           if (e.which == 13 || isDelimiter(e.which)) {
