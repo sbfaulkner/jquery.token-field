@@ -4,7 +4,7 @@
        regex: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
        delimiters: ', ',
        max: 0,
-       nested: true,
+       nested: false,
        badToken: function() { $(this).val(''); },
        tooMany: function() { $(this).val(''); }
     };
@@ -19,23 +19,22 @@
       }
     }
 
+    function expandTokens(name, tokens) {
+      return $.map(tokens, function(v) {
+        return tokenHtml(name,v);
+      }).join('');
+    }
+
+    function inputHtml(name) {
+      return "<div class='token-input'><input type='text' size='1'/><span class='token-input-sizer'>###</span></div>";
+    }
+
     function isDelimiter(ch) {
       return String.fromCharCode(ch).match(RegExp('['+settings.delimiters+']'));
     }
 
     function isToken(text) {
       return text.match(settings.regex);
-    }
-
-    function tokenHtml(name,text) {
-      return "<a href='#' class='token'><span><span><span><span>"
-              + text
-              + (settings.nested ? "<input type='hidden' value='"+text+"' name='"+name+"'/>" : "")
-              + "<span href='#' class='token-x'>x</span></span></span></span></span></a>";
-    }
-
-    function inputHtml(name) {
-      return "<div class='token-input'><input type='text' size='1'/><span class='token-input-sizer'>###</span></div>";
     }
 
     function observeTokenField(tokenField) {
@@ -83,8 +82,10 @@
               if (isToken($(this).val())) {
                 observeToken($(tokenHtml($(this).attr('name'),$(this).val())).insertBefore($(this).closest('.token-input')));
                 if (!settings.nested) {
-                  var values = $(this).closest('.token-field').find('input:hidden');
-                  values.val((values.val()+','+$(this).val()).replace(/^,/,''));
+                  var input = $(this).closest('.token-field').find('input:hidden');
+                  var values = input.val().split(',');
+                  values.splice(0, 0, $(this).val());
+                  input.val(values.join(','));
                 }
                 $(this).val('');
               } else {
@@ -116,7 +117,7 @@
       .keydown(function(e) {
         if ($(this).hasClass('selected-token')) {
           if (e.which == 8) {
-            $(this).remove();
+            removeToken($(this));
             return false;
           }
         }
@@ -134,15 +135,9 @@
       // remove token when "x" clicked
       $('.token-x', token).click(function() {
         $(this).closest('.token').siblings('.selected-token').removeClass('selected-token');
-        $(this).closest('.token').remove();
+        removeToken($(this).closest('.token'));
         return false;
       });
-    }
-
-    function expandTokens(name, tokens) {
-      return $.map(tokens, function(v) {
-        return tokenHtml(name,v);
-      }).join('');
     }
 
     function parseTokens(text) {
@@ -153,6 +148,24 @@
         console_log('Warning: ignoring bad token - '+v);
         return null;
       });
+    }
+
+    function removeToken(token) {
+      if (!settings.nested) {
+        var index = token.siblings('.token').andSelf().index(token);
+        var input = token.closest('.token-field').find('input:hidden');
+        var values = input.val().split(',');
+        values.splice(index, 1);
+        input.val(values.join(','));
+      }
+      token.remove();
+    }
+
+    function tokenHtml(name,text) {
+      return "<a href='#' class='token'><span><span><span><span>"
+              + text
+              + (settings.nested ? "<input type='hidden' value='"+text+"' name='"+name+"'/>" : "")
+              + "<span href='#' class='token-x'>x</span></span></span></span></span></a>";
     }
 
     return this.each(function(){
