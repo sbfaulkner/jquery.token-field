@@ -24,15 +24,51 @@ Add support for converting an English representation of elapsed time into second
 
 ## Options
 
+       regex: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
+       delimiters: ', ',
+       max: 0,
+       nested: false,
+       badToken: function() { $(this).val(''); },
+       tooMany: function() { $(this).val(''); }
+
+### badToken
+A callback function to implement behaviour when an token is invalid.
+
+Default: clear the invalid token
+
+### delimiters
+A string containing the characters to recognize as delimiters for tokens.
+
+Default: ', ' (ie. comma and/or space)
+
+### max
+The maximum number of values to allow.
+
+Default: 0 (unlimited)
+
+### nested
+Set to true to preserve the legacy behaviour of token values being stored in multiple hidden
+input elements with the same name.
+
+Set to false to store token values in a single hidden input element with a comma-delimited value.
+
+Default: false (single, comma-delimited value)
+
 ### regex
-Provide an alternate regular expression for validating values.
+An alternate regular expression for validating values.
 
 Default: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i (email address)
 
-### max
-Specify the maximum number of values to allow.
+### tooMany
+A callback function to implement behaviour when the number of tokens exceeds the maximum (if provided).
 
-Default: 0 (unlimited)
+Default: clear the invalid token
+
+## CHANGES
+
+* __IMPORTANT__: An incompatability was introduced when nested input values were deprecated
+  in favour of a single comma-delimited value. The original behaviour may be preserved using
+  the nested option with a value of true. (2010/03/18)
 
 ## TODO
 
