@@ -1,6 +1,6 @@
 # jquery.token-field
 
-Add support for converting an English representation of elapsed time into seconds and back (with validation).
+jquery plugin to deal with tokenized input (ie. tags or email addresses)
 
 ## Usage
 
