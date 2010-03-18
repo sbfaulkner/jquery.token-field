@@ -24,13 +24,6 @@ jquery plugin to deal with tokenized input (ie. tags or email addresses)
 
 ## Options
 
-       regex: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
-       delimiters: ', ',
-       max: 0,
-       nested: false,
-       badToken: function() { $(this).val(''); },
-       tooMany: function() { $(this).val(''); }
-
 ### badToken
 A callback function to implement behaviour when an token is invalid.
 
