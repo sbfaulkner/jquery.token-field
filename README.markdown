@@ -65,8 +65,6 @@ Default: clear the invalid token
 
 ## TODO
 
-* make sure form submission is correct
-
 ## Legal
 
 **Author:** S. Brent Faulkner <brentf@unwwwired.net>  
