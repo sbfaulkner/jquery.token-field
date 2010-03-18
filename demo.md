@@ -9,7 +9,7 @@ title: jquery.token-field demo
 ### Source ###
 
 {% highlight html %}
-<input type='text' id='input-test'
+<input type='text' id='input-test' name='emails'
         value='one@first.net,two@second.net,three@third.net,four@fourth.net,five@fifth.net'/>
 <script>
 $('#input-test').tokenField();
@@ -18,14 +18,14 @@ $('#input-test').tokenField();
 
 ### Result ###
 
-<input type='text' id='input-test' value='one@first.net,two@second.net,three@third.net,four@fourth.net,five@fifth.net'/>
+<input type='text' id='input-test' name='emails' value='one@first.net,two@second.net,three@third.net,four@fourth.net,five@fifth.net'/>
 
 ## Tokenized &lt;TEXTAREA&gt; ##
 
 ### Source ###
 
 {% highlight html %}
-<textarea id='textarea-test'>
+<textarea id='textarea-test' name='emails'>
 one@first.net,two@second.net,three@third.net,four@fourth.net,five@fifth.net
 </textarea>
 <script>
@@ -35,7 +35,7 @@ $('#textarea-test').tokenField();
 
 ### Result ###
 
-<textarea id='textarea-test'>
+<textarea id='textarea-test' name='emails'>
 one@first.net,two@second.net,three@third.net,four@fourth.net,five@fifth.net
 </textarea>
 
@@ -44,7 +44,7 @@ one@first.net,two@second.net,three@third.net,four@fourth.net,five@fifth.net
 ### Source ###
 
 {% highlight html %}
-<input type='text' id='max-test'
+<input type='text' id='max-test' name='emails'
         value='one@first.net,two@second.net,three@third.net,four@fourth.net,five@fifth.net'/>
 <script>
   $('#max-test').tokenField({
@@ -55,14 +55,14 @@ one@first.net,two@second.net,three@third.net,four@fourth.net,five@fifth.net
 
 ### Result ###
 
-<input type='text' id='max-test' value='one@first.net,two@second.net,three@third.net,four@fourth.net,five@fifth.net'/>
+<input type='text' id='max-test' name='emails' value='one@first.net,two@second.net,three@third.net,four@fourth.net,five@fifth.net'/>
 
 ## Tokenized &lt;INPUT&gt; with phone number regex ##
 
 ### Source ###
 
 {% highlight html %}
-<input type='text' id='phone-test' value='555-1212,(123) 555-1212'/>
+<input type='text' id='phone-test' name='numbers' value='555-1212,(123) 555-1212'/>
 <script>
 $('#phone-test').tokenField({regex:/^(?:\([0-9]{3}\) ?)?[0-9]{3}\-[0-9]{4}$/});
 </script>
@@ -70,14 +70,14 @@ $('#phone-test').tokenField({regex:/^(?:\([0-9]{3}\) ?)?[0-9]{3}\-[0-9]{4}$/});
 
 ### Result ###
 
-<input type='text' id='phone-test' value='555-1212,(123) 555-1212'/>
+<input type='text' id='phone-test' name='numbers' value='555-1212,(123) 555-1212'/>
 
 ## Tokenized &lt;INPUT&gt; with word regex ##
 
 ### Source ###
 
 {% highlight html %}
-<input type='text' id='word-test' value='abc123,hello,foo-bar,no spaces,underscore_ok'/>
+<input type='text' id='word-test' name='words' value='abc123,hello,foo-bar,no spaces,underscore_ok'/>
 <script>
 $('#word-test').tokenField({regex:/^[a-z][\w\-]+$/i});
 </script>
@@ -85,7 +85,7 @@ $('#word-test').tokenField({regex:/^[a-z][\w\-]+$/i});
 
 ### Result ###
 
-<input type='text' id='word-test' value='abc123,hello,foo-bar,no spaces,underscore_ok'/>
+<input type='text' id='word-test' name='words' value='abc123,hello,foo-bar,no spaces,underscore_ok'/>
 
 <script type="text/javascript">
   //<![CDATA[

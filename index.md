@@ -36,12 +36,12 @@ The token-field plugin for jquery provides a convenient (and stylish!) way to co
     </script>
   </head>
   <body>
-    <textarea class='email'>one@domain.com,two@other.net,three@somewhere.ca</textarea>
+    <textarea class='email' name='emails'>one@domain.com,two@other.net,three@somewhere.ca</textarea>
   </body>
 </html>
 {% endhighlight %}
 
-<textarea class='email'>one@domain.com,two@other.net,three@somewhere.ca</textarea>
+<textarea class='email' name='emails'>one@domain.com,two@other.net,three@somewhere.ca</textarea>
 
 ## Demo ##
 
