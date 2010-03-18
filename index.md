@@ -25,7 +25,7 @@ The token-field plugin for jquery provides a convenient (and stylish!) way to co
 {% highlight html %}
 <html>
   <head>
-    <title>jquery.token example</title>
+    <title>jquery.token-field example</title>
     <link rel="stylesheet" href="/stylesheets/token-field.css" type="text/css" media="screen">
     <script src="/javascripts/jquery.js" type="text/javascript"></script>
     <script src="/javascripts/jquery.token-field.js" type="text/javascript"></script>
