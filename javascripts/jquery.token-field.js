@@ -84,7 +84,7 @@
                 if (!settings.nested) {
                   var input = $(this).closest('.token-field').find('input:hidden');
                   var values = input.val().split(',');
-                  values.splice(0, 0, $(this).val());
+                  values.splice(values.length-1, 0, $(this).val());
                   input.val(values.join(','));
                 }
                 $(this).val('');
