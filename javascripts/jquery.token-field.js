@@ -76,20 +76,20 @@
         })
         // "parse" and insert token, then clear the input field
         .blur(function(e) {
-          if (!$(this).data('blur')) {
-            $(this).data('blur', true);
-            if (settings.max == 0 || $(this).closest('.token-input').siblings('.token').length < settings.max) {
-              if (isToken($(this).val())) {
-                observeToken($(tokenHtml($(this).attr('name'),$(this).val())).insertBefore($(this).closest('.token-input')));
+          var input_orig = $(this);
+          if (!input_orig.data('blur')) {
+            input_orig.data('blur', true);
+            if (settings.max == 0 || input_orig.closest('.token-input').siblings('.token').length < settings.max) {
+              if (isToken(input_orig.val())) {
+                observeToken($(tokenHtml(input_orig.attr('name'),input_orig.val())).insertBefore(input_orig.closest('.token-input')));
                 if (!settings.nested) {
-                  var input = $(this).closest('.token-field').find('input:hidden');
+                  var input = input_orig.closest('.token-field').find('input:hidden');
                   var values = input.val().split(',');
-                  values.splice(0, 0, $(this).val());
+                  values.splice(0, 0, input_orig.val());
                   input.val(values.join(','));
                 }
-                var $input = $(this);
-                $input.val('');
-                setTimeout(function(){ $input.focus(); }, 100);
+                input_orig.val('');
+                setTimeout(function(){ input_orig.focus(); }, 100);
               } else {
                 if (settings.badToken) {
                   this.badToken = settings.badToken;
