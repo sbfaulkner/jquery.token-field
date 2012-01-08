@@ -87,7 +87,9 @@
                   values.splice(0, 0, $(this).val());
                   input.val(values.join(','));
                 }
-                $(this).val('');
+                var $input = $(this);
+                $input.val('');
+                setTimeout(function(){ $input.focus(); }, 100);
               } else {
                 if (settings.badToken) {
                   this.badToken = settings.badToken;
