@@ -85,6 +85,7 @@
                   var input = $(this).closest('.token-field').find('input:hidden');
                   var values = input.val().split(',');
                   values.splice(0, 0, $(this).val());
+                  values.pop();
                   input.val(values.join(','));
                 }
                 $(this).val('');
