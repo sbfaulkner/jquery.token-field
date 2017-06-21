@@ -152,7 +152,7 @@
 
     function removeToken(token) {
       if (!settings.nested) {
-        var index = token.siblings('.token').andSelf().index(token);
+        var index = token.siblings('.token').addBack().index(token);
         var input = token.closest('.token-field').find('input:hidden');
         var values = input.val().split(',');
         values.splice(index, 1);
